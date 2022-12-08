@@ -17,6 +17,12 @@ class Lootbox():
         opened = self.open()
         print("You opened a "+self.__str__()+" and got "+opened+"!")
         return opened
+    def lootList(self):
+        lootList = []
+        for thingy in self.lootTable:
+            for i in range(0,self.lootTable[thingy]):
+                lootList.append(thingy)
+        return lootList
 
 if __name__ == "__main__":
     # Run tests
